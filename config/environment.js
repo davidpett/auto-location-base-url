@@ -4,7 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'auto-location-base-url',
     environment: environment,
-    baseURL: '/',
+    baseURL: '',
+    rootURL: 'dist',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

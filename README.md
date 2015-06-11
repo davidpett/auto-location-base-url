@@ -3,51 +3,12 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
 * `ember build --environment production` (production)
+* edit the `dist/index.html` and remove the `<base href="/" />`
+* run `node static_server` and open http://localhost:8080/dist
 
-### Deploying
+you should see the error in the console `Uncaught UnrecognizedURLError: /dist/`.
 
-Specify what it takes to deploy your app.
+if you run `bower i --save ember#release` and follow the above steps, it works correctly.
 
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+you will also get the error if you run on 1.12.0
